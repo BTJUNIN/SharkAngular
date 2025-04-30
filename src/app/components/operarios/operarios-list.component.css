@@ -1,0 +1,124 @@
+.conteudo {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-x: auto;
+  }
+  
+  h1 {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .tabela-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .tabela-operarios {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+  }
+  
+  .tabela-operarios th,
+  .tabela-operarios td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .tabela-operarios th {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .status.alocado {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status.descolado {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .botao-editar,
+  .botao-deletar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .botao-editar {
+    background-color: #007bff;
+    margin-right: 5px;
+  }
+  
+  .botao-deletar {
+    background-color: #f44336;
+  }
+  
+  .botao-editar:hover {
+    background-color: #0056b3;
+  }
+  
+  .botao-deletar:hover {
+    background-color: #d32f2f;
+  }
+  
+  .paginacao {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .paginacao button {
+    margin: 0 3px;
+    padding: 5px 10px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .paginacao .ativo {
+    background: orange;
+    color: white;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .conteudo {
+      align-items: stretch;
+      padding: 20px;
+    }
+  
+    .tabela-container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .conteudo {
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .tabela-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .tabela-operarios {
+      min-width: 600px;
+    }
+  }

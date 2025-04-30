@@ -1,0 +1,47 @@
+<div class="conteudo">
+    <h1>Lista de Operários</h1>
+  
+    <div class="tabela-container">
+      <table class="tabela-operarios">
+        <thead>
+          <tr>
+            <th>ID Operário</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>CPF</th>
+            <th>Disponível</th>
+            <th>Endereço da Obra</th>
+            <th>Obra Alocada</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let operario of operarios">
+            <td>{{operario.id}}</td>
+            <td>{{operario.nome}}</td>
+            <td>{{operario.endereco}}</td>
+            <td>{{operario.cpf}}</td>
+            <td [class]="'status ' + (operario.alocado ? 'alocado' : 'descolado')">
+              {{operario.alocado ? 'Alocado' : 'Descolado'}}
+            </td>
+            <td>{{operario.enderecoObra || 'N/A'}}</td>
+            <td>{{operario.obraAlocada || 'não alocado'}}</td>
+            <td>
+              <button class="botao-editar" (click)="editarOperario(operario)">Editar</button>
+              <button class="botao-deletar" (click)="deletarOperario(operario.id)">Deletar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div class="paginacao">
+        <button (click)="mudarPagina(paginaAtual - 1)" [disabled]="paginaAtual === 1">&laquo;</button>
+        <button *ngFor="let pagina of paginas" 
+                (click)="mudarPagina(pagina)"
+                [class.ativo]="pagina === paginaAtual">
+          {{pagina}}
+        </button>
+        <button (click)="mudarPagina(paginaAtual + 1)" [disabled]="paginaAtual === totalPaginas">&raquo;</button>
+      </div>
+    </div>
+  </div>
