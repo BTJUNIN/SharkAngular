@@ -1,0 +1,58 @@
+/* Mantenha os estilos do seu arquivo original */
+.conteudo {
+    flex: 1;
+    padding: 30px;
+    overflow-x: auto;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .cartao {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    max-width: 800px;
+  }
+  
+  .grupo-formulario {
+    margin-bottom: 15px;
+  }
+  
+  .grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .grupo-formulario input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .linha {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .linha .grupo-formulario {
+    flex: 1;
+  }
+  
+  .botao button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .botao button:hover {
+    background-color: #0056b3;
+  }

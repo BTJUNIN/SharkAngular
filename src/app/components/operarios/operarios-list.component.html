@@ -1,6 +1,9 @@
 <div class="conteudo">
     <h1>Lista de Operários</h1>
   
+    <li routerLink="/cadastrar-operario" style="cursor: pointer;">
+      Cadastrar Operário
+    </li>
     <div class="tabela-container">
       <table class="tabela-operarios">
         <thead>
@@ -13,6 +16,8 @@
             <th>Endereço da Obra</th>
             <th>Obra Alocada</th>
             <th>Ações</th>
+            <th>Telefone</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +26,8 @@
             <td>{{operario.nome}}</td>
             <td>{{operario.endereco}}</td>
             <td>{{operario.cpf}}</td>
+            <td>{{operario.telefone}}</td>
+            <td>{{operario.email}}</td>
             <td [class]="'status ' + (operario.alocado ? 'alocado' : 'descolado')">
               {{operario.alocado ? 'Alocado' : 'Descolado'}}
             </td>

@@ -1,0 +1,62 @@
+<div class="conteudo">
+    <h1>Cadastrar Operário</h1>
+    <p>Insira os dados do Operário</p>
+  
+    <div class="cartao">
+      <h3>Informações do Operário</h3>
+      <p>Insira os dados do operário</p>
+  
+      <form (ngSubmit)="cadastrarOperario()">
+        <div class="grupo-formulario">
+          <label>Nome</label>
+          <input type="text" [(ngModel)]="operario.nome" name="nome" required>
+        </div>
+  
+        <div class="grupo-formulario">
+          <label>CPF</label>
+          <input type="text" [(ngModel)]="operario.cpf" name="cpf" required>
+        </div>
+  
+        <div class="grupo-formulario">
+          <label>Telefone</label>
+          <input type="text" [(ngModel)]="operario.telefone" name="telefone" required>
+        </div>
+  
+        <div class="grupo-formulario">
+          <label>Email</label>
+          <input type="email" [(ngModel)]="operario.email" name="email">
+        </div>
+  
+        <div class="grupo-formulario">
+          <label>CEP</label>
+          <input type="text" [(ngModel)]="operario.cep" name="cep">
+        </div>
+  
+        <div class="grupo-formulario">
+          <label>Endereço</label>
+          <input type="text" [(ngModel)]="operario.endereco" name="endereco">
+        </div>
+  
+        <div class="linha">
+          <div class="grupo-formulario">
+            <label>Número</label>
+            <input type="text" [(ngModel)]="operario.numero" name="numero">
+          </div>
+  
+          <div class="grupo-formulario">
+            <label>Bairro</label>
+            <input type="text" [(ngModel)]="operario.bairro" name="bairro">
+          </div>
+  
+          <div class="grupo-formulario">
+            <label>Estado</label>
+            <input type="text" [(ngModel)]="operario.estado" name="estado">
+          </div>
+        </div>
+  
+        <div class="botao">
+          <button type="submit">Cadastrar →</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,49 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Operario } from '../models/operarios';
-import { CommonModule } from '@angular/common'; 
-import { OperarioService } from '../services/operario.service';
 
-@Component({
-  selector: 'app-operarios-list',
-  imports: [CommonModule], // Adicione esta linha
-  templateUrl: './operarios-list.component.html',
-  styleUrls: ['./operarios-list.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class OperariosListComponent implements OnInit {
-  operarios: Operario[] = [];
-  paginaAtual: number = 1;
-  totalPaginas: number = 5;
-  paginas: number[] = [1, 2, 3, 4, 5];
+export class OperarioService {
+  private apiUrl = 'http://localhost:4200/operarios'; // Ajuste para sua API
 
-  constructor(private operarioService: OperarioService) {}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.carregarOperarios();
+  getOperarios(pagina: number = 1): Observable<Operario[]> {
+    return this.http.get<Operario[]>(`${this.apiUrl}?page=${pagina}`);
   }
 
-  carregarOperarios(): void {
-    this.operarioService.getOperarios(this.paginaAtual)
-      .subscribe(operarios => this.operarios = operarios);
+  addOperario(operario: Operario): Observable<Operario> {
+    return this.http.post<Operario>(this.apiUrl, operario);
   }
 
-  editarOperario(operario: Operario): void {
-    // Implementar lógica de edição
-    console.log('Editar operário:', operario);
+  deleteOperario(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
-
-  deletarOperario(id: number): void {
-    if (confirm('Tem certeza que deseja deletar este operário?')) {
-      this.operarioService.deleteOperario(id)
-        .subscribe(() => {
-          this.carregarOperarios();
-        });
-    }
-  }
-
-  mudarPagina(pagina: number): void {
-    if (pagina >= 1 && pagina <= this.totalPaginas) {
-      this.paginaAtual = pagina;
-      this.carregarOperarios();
-    }
-  }
+}
+export class OperariosListComponent {
+  
 }

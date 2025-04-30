@@ -1,40 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Operario } from '../models/operarios';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OperarioService {
-  private operariosMock: Operario[] = [
-    {
-      id: 1,
-      nome: 'joao gabriel',
-      endereco: 'Curabitur donec duis',
-      cpf: '123-123-12312',
-      alocado: true,
-      enderecoObra: 'estr campo limpo,143',
-      obraAlocada: '1'
-    },
-    {
-      id: 2,
-      nome: 'luis gustavo',
-      endereco: 'sdad',
-      cpf: '123-123-12313',
-      alocado: false,
-      enderecoObra: 'Av. Central, 123',
-      obraAlocada: 'não alocado'
-    }
-  ];
+  private apiUrl = 'http://localhost:4200/operarios'; // Ajuste para sua API
+
+  constructor(private http: HttpClient) {}
 
   getOperarios(pagina: number): Observable<Operario[]> {
-    // Simulando paginação
-    return of(this.operariosMock);
+    return this.http.get<Operario[]>(`${this.apiUrl}?page=${pagina}`);
+  }
+
+  addOperario(operario: Operario): Observable<Operario> {
+    return this.http.post<Operario>(this.apiUrl, operario);
   }
 
   deleteOperario(id: number): Observable<void> {
-    // Simulando deleção
-    this.operariosMock = this.operariosMock.filter(op => op.id !== id);
-    return of(undefined);
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
