@@ -1,0 +1,138 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* ajuda na responsividade em telas pequenas */
+    box-sizing: border-box;
+  }
+  
+  
+  .login-box {
+    width: 400px;
+    padding: 40px;
+    border-radius: 16px;
+    position: relative;
+    background-image: url('/assets/img/escavadeiras.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .login-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+   
+    z-index: 0;
+    border-radius: 16px;
+  }
+  
+  .login-box {
+    background-image: url('/assets/img/escavadeiras.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  
+  .input-group img {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .esqueci {
+    text-align: right;
+    font-size: 12px;
+  }
+  
+  .esqueci a {
+    color: #90caff;
+    text-decoration: none;
+  }
+  
+  .botao-login {
+    background-color: #f38f00;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 12px 0;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .botao-google {
+    background-color: white;
+    color: #444;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .botao-google img {
+    width: 20px;
+  }
+  
+  .cadastro {
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .cadastro a {
+    color: #90caff;
+    text-decoration: none;
+  }
+  

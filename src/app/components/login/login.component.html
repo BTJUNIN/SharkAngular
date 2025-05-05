@@ -1,0 +1,42 @@
+<div class="login-container">
+    <div class="login-box">
+      <div class="logo">
+        <img src="/assets/img/logo.svg" alt="Logo Shark Fera" />
+      </div>
+  
+      <h2>Acesse sua conta</h2>
+  
+      <form (submit)="fazerLogin($event)">
+        <div class="input-group">
+          <img src="/assets/img/icons8-arroba-24.png" alt="arroba" />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+  
+        <div class="input-group">
+          <img src="/assets/img/icons8-cadeado-24.png" alt="cadeado" />
+          <input type="password" name="senha" placeholder="Senha" required />
+        </div>
+  
+        <div class="esqueci">
+          <a href="#">Esqueci minha senha</a>
+        </div>
+  
+        <button type="submit" class="botao-login">Acessar</button>
+  
+        <div class="divider">
+          <span>ou</span>
+        </div>
+  
+        <button type="button" class="botao-google">
+          <img src="/assets/img/icons8-google-logo-30.png" alt="Google" />
+          Entrar com Google
+        </button>
+  
+        <div class="cadastro">
+          <span>Não tem uma conta?</span>
+          <a routerLink="/cadastrar-cliente">Cadastre-se</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  

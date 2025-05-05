@@ -1,0 +1,615 @@
+/* Reset e estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    color: #1a1a1a;
+    background: #ffffff;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Estilos gerais */
+  .container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  section {
+    padding: 80px 0;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  .nav a {
+    margin-left: 30px;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #ff7700;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('/assets/img/div-elementor-element0.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    color: white;
+    position: relative;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    z-index: 2;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .hero h1 span {
+    color: #ff7700;
+  }
+  
+  .stats {
+    display: flex;
+    background: #ff7700;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+  
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .stat-number {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-size: 15px;
+  }
+  
+  /* Services Section */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .service-card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    color: white;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .service-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(26, 26, 26, 0.8) 0%,
+      rgba(26, 26, 26, 0.1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  
+  .service-card h3 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 19px;
+  }
+  
+  .service-card p {
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    font-size: 15px;
+  }
+  
+  /* Machines Section */
+  .machines {
+    background: #f9f9f9;
+    padding: 80px 0;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+  
+  .view-all {
+    color: #1a1a1a;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .view-all::after {
+    content: '→';
+    margin-left: 5px;
+  }
+  
+  .machines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .machine-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .machine-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .machine-card h3 {
+    padding: 20px 30px 0;
+    font-size: 19px;
+  }
+  
+  .price {
+    padding: 0 30px;
+    color: #eb664e;
+    font-weight: 600;
+    font-size: 21px;
+  }
+  
+  .price span {
+    font-size: 14px;
+  }
+  
+  .machine-card p {
+    padding: 0 30px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .details {
+    padding: 20px 30px;
+    border-top: 1px solid #e9e9e9;
+    margin-top: 20px;
+  }
+  
+  .details p {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .rent-btn {
+    background: #1f4b43;
+    color: white;
+    border: none;
+    border-radius: 33px;
+    padding: 10px 20px;
+    margin: 20px 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .rent-btn:hover {
+    background: #14332d;
+  }
+  
+  /* About Section */
+  .about {
+    background: url('/assets/img/div-elementor-element5.png') center/cover no-repeat;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+  }
+  
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .about h2 {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .company-name {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex;
+  }
+  
+  .about-text {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about-text h3 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Differentials Section */
+  .differentials {
+    background: linear-gradient(172.03deg, #9d340e 0%, #371205 58.24%, #6b230a 100%);
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .differentials-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  
+  .differentials-image {
+    background: url('/assets/img/div-property-banner-inner0.png') center/cover no-repeat;
+    border-radius: 16px;
+    height: 700px;
+    position: relative;
+  }
+  
+  .differentials-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(26,26,26,0.1) 60%, rgba(26,26,26,0.8) 100%);
+  }
+  
+  .differentials-list {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    align-self: center;
+  }
+  
+  .differentials-list p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .differentials-list ul {
+    list-style: none;
+    margin: 30px 0;
+  }
+  
+  .differentials-list li {
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .differentials-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ff7700;
+    font-size: 30px;
+    line-height: 20px;
+  }
+  
+  /* Team Section */
+  .team {
+    background: #f9f9f9;
+    padding: 100px 0;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .team-member {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .team-member h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .position {
+    color: #1a1a1a;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 17px;
+    color: #1a1a1a;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: #f9f9f9;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 30px;
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  .company-info {
+    margin-bottom: 40px;
+    font-size: 15px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    border-radius: 60px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+  }
+  
+  .contact-form input {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    outline: none;
+  }
+  
+  .contact-form button {
+    background: none;
+    border: none;
+    padding: 0 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #f2f1f1;
+    padding: 50px 0;
+  }
+  
+  .footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .copyright {
+    font-size: 15px;
+  }
+  
+  .footer-logo img {
+    height: 60px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: #1a1a1a;
+    font-size: 15px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .hero h1 {
+      font-size: 48px;
+    }
+    
+    .differentials-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .differentials-image {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .nav {
+      margin-top: 20px;
+    }
+    
+    .nav a {
+      margin: 0 15px;
+    }
+    
+    .hero h1 {
+      font-size: 36px;
+    }
+    
+    .stats {
+      flex-direction: column;
+    }
+    
+    .stat-item {
+      margin-bottom: 20px;
+    }
+    
+    .about-text h3 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+    }
+    
+    .contact-form {
+      flex-direction: column;
+      border-radius: 20px;
+    }
+    
+    .contact-form input {
+      padding: 15px;
+    }
+    
+    .contact-form button {
+      padding: 15px;
+      justify-content: center;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    width: 100vw; /* força o full screen */
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  

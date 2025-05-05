@@ -1,20 +1,15 @@
-/* Mantenha os estilos do seu arquivo original */
+/* Mantenha os mesmos estilos do cadastraCliente.css */
 .conteudo {
     flex: 1;
-    padding: 30px;
-    overflow-x: auto;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
+    padding: 40px;
   }
   
   .cartao {
-    background: white;
+    background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    max-width: 800px;
+    max-width: 600px;
   }
   
   .grupo-formulario {
@@ -29,30 +24,35 @@
   
   .grupo-formulario input {
     width: 100%;
-    padding: 8px 10px;
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
   
   .linha {
     display: flex;
-    gap: 15px;
+    gap: 10px;
   }
   
   .linha .grupo-formulario {
     flex: 1;
   }
   
+  .botao {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
   .botao button {
-    background-color: #f38f00;
+    background-color: #ff9800;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-weight: bold;
   }
   
   .botao button:hover {
-    background-color: #f38f00;
+    background-color: #e68900;
   }

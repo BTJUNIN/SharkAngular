@@ -1,62 +1,74 @@
 <div class="conteudo">
-    <h1>Cadastrar Operário</h1>
-    <p>Insira os dados do Operário</p>
-  
-    <div class="cartao">
-      <h3>Informações do Operário</h3>
-      <p>Insira os dados do operário</p>
-  
-      <form (ngSubmit)="cadastrarOperario()">
+  <h1>cadastrar operarios</h1>
+  <p>Insira os dados dos operarios</p>
+
+  <div class="cartao">
+    <h3>Informações do Operario</h3>
+    <form>
+      <div class="grupo-formulario">
+        <label>Cliente</label>
+        <input type="text" name="cliente">
+      </div>
+      <div class="grupo-formulario">
+        <label>CPF</label>
+        <input type="text" name="cpf">
+      </div>
+      <div class="grupo-formulario">
+        <label>Telefone</label>
+        <input type="text" name="telefone">
+      </div>
+      <div class="grupo-formulario">
+        <label>Email</label>
+        <input type="email" name="email">
+      </div>
+      <div class="grupo-formulario">
+        <label>CEP</label>
+        <input type="text" name="cep">
+      </div>
+      <div class="grupo-formulario">
+        <label>Endereço</label>
+        <input type="text" name="endereco">
+      </div>
+
+      <div class="linha">
         <div class="grupo-formulario">
-          <label>Nome</label>
-          <input type="text" [(ngModel)]="operario.nome" name="nome" required>
+          <label>Número</label>
+          <input type="text" name="numero">
         </div>
-  
         <div class="grupo-formulario">
-          <label>CPF</label>
-          <input type="text" [(ngModel)]="operario.cpf" name="cpf" required>
+          <label>Bairro</label>
+          <input type="text" name="bairro">
         </div>
-  
         <div class="grupo-formulario">
-          <label>Telefone</label>
-          <input type="text" [(ngModel)]="operario.telefone" name="telefone" required>
+          <label>Estado</label>
+          <input type="text" name="estado">
         </div>
-  
+      </div>
+
+      <div class="linha">
         <div class="grupo-formulario">
-          <label>Email</label>
-          <input type="email" [(ngModel)]="operario.email" name="email">
+          <label>Tipo Obra</label>
+          <input type="text" name="tipoMaquina">
         </div>
-  
         <div class="grupo-formulario">
-          <label>CEP</label>
-          <input type="text" [(ngModel)]="operario.cep" name="cep">
+          
         </div>
-  
+      </div>
+
+      <div class="linha">
         <div class="grupo-formulario">
-          <label>Endereço</label>
-          <input type="text" [(ngModel)]="operario.endereco" name="endereco">
+          <label>Data de Início</label>
+          <input type="date" name="dataInicio">
         </div>
-  
-        <div class="linha">
-          <div class="grupo-formulario">
-            <label>Número</label>
-            <input type="text" [(ngModel)]="operario.numero" name="numero">
-          </div>
-  
-          <div class="grupo-formulario">
-            <label>Bairro</label>
-            <input type="text" [(ngModel)]="operario.bairro" name="bairro">
-          </div>
-  
-          <div class="grupo-formulario">
-            <label>Estado</label>
-            <input type="text" [(ngModel)]="operario.estado" name="estado">
-          </div>
+        <div class="grupo-formulario">
+          <label>Data de Término</label>
+          <input type="date" name="dataTermino">
         </div>
-  
-        <div class="botao">
-          <button type="submit">Cadastrar →</button>
-        </div>
-      </form>
-    </div>
+      </div>
+
+      <div class="botao">
+        <button type="submit">Cadastrar→</button>
+      </div>
+    </form>
   </div>
+</div>
